@@ -7,6 +7,7 @@ class FoodItem extends React.Component{
 
     constructor(props){
         super(props)
+        //state of fooditem component...
         this.state = {
             quantity:0,
             name:this.props.item.name,
@@ -17,11 +18,13 @@ class FoodItem extends React.Component{
         this.quantitychange = this.quantitychange.bind(this)
         this.radiochange = this.radiochange.bind(this)
     }
-
+    //handler function when user adds the items to the cart
     handlerequest(){
+        //check if the user has selected size and quantity or not.....
         if(!this.state.checked || !this.state.quantity){
             return alert('please select a quantity and size to proceed')
         }
+        //update the list of items in parent component's state....
         this.props.updatelist(this.state)
     }
 
@@ -37,7 +40,7 @@ class FoodItem extends React.Component{
     }
 
     radiochange(value){
-
+        //set checked state according ot the selected size of item....
         this.setState((prevState)=>{
             var cost=0
             if(value===1){

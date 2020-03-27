@@ -3,11 +3,16 @@ import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import './Checkout.css'
 
+//fucntional component for checkout modal to list all items in the cart....
 function Checkout(props){
+
+    //ccalculate net price of the cart items...
     let totalprice =0
     props.itemlist.forEach((item)=>{
             totalprice+=(item.price*item.quantity)
     })
+
+    //functions to handle modal fucntionality....
     const [lgshow, setLgShow] = useState(false);
     const handleShow = () => setLgShow(true);
     const handleClose = () => setLgShow(false);
@@ -42,6 +47,7 @@ return (
                             <th>Total Price</th>
                             </tr>
                             {props.itemlist.map((item)=>
+                    //for each item in the list create a row to diaplay details of order..
                                 <tr>
                                     <td>{item.name}</td>
                                     <td>{item.checked===1 && 'small'}
