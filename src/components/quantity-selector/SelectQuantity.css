@@ -1,0 +1,15 @@
+.increment-quantity{
+    display: inline;
+    text-align: center;
+}
+.fa{
+    color:white;
+}
+
+.plusminus{
+    background: transparent;
+    border:none;
+}
+.plusminus:focus{
+    outline:none;
+}

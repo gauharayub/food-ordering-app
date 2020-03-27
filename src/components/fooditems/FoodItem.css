@@ -1,0 +1,15 @@
+.col-md-6{
+    margin-bottom:9.0%;
+}
+
+#food-name{
+    color: mediumspringgreen;
+}
+#addcart{
+    margin-top:3%;
+}
+
+.price{
+    color:mediumspringgreen;
+    font-weight: 850;
+}
